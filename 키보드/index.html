@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    body{
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+.searchbox{
+  width: 90%;
+  margin: 10px auto;
+}
+.header{
+  background: #ECDFBF;
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+}
+.header h1{
+  text-transform: uppercase;
+  color: white;
+  margin: 0;
+  margin-bottom: 8px;
+}
+#value{
+  border: none;
+  background: #E0D3B6;
+  padding: 6px;
+  font-size: 18px;
+  width: 80%;
+  border-radius: 6px;
+  color: white;
+}
+#value:focus{
+  outline: none;
+}
+.container{
+  background: #FFFFF5;
+  padding: 1%;
+}
+.item{
+  margin: 3% 0px;
+  display: flex;
+  align-items: center;
+}
+.icon{
+  width: 25px;
+  height: 25px;
+  background: #E0D3B6;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.name{
+  font-size: 17px;
+  font-weight: 470;
+  color: #333;
+}
+  </style>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>지환키보드 백과</title>
+</head>
+<body>
+  <body>
+    <div class="searchbox">
+       <div class="header">
+         <h1>키보드 백과</h1>
+         <input onkeyup="filter()" type="text" id="value" placeholder="찾고싶은 내용을 쓰십시오.">
+       </div>
+ 
+       <div class="container">
+ 
+         <div class="item">
+           <span class="icon">청축</span>
+           <img src="청축.gif" width="100", height="100">
+           <br>
+           <audio controls autoplay> <source src="청축.m4a" type="audio/mp3"> </audio>
+           
+           <span class="name"><H1>청축</H1><br>청축은 딸깍소리가 나며 키압이 높아 장시간 타이핑할경우 손이 아프다는 단점이 있다.<BR> 장점은 딸깍 소리가나 기분이 좋아진다.</span>
+         </div>
+ 
+         <div class="item">
+           <span class="icon">갈축</span>
+           <img src="갈축.gif" width="100", height="100"><br><audio controls autoplay> <source src="갈축.m4a" type="audio/mp3"> </audio>
+           <span class="name"><H1>갈축</H1><br>갈축은 적축과 청축 사이에있는 스위치로<BR>
+             청축과 적축을 둘다 즐기고 싶다면 갈축을 선택하는것이 좋을것이다.</span>
+         </div>
+ 
+         <div class="item">
+           <span class="icon">적축</span>
+           <img src="적축.gif" width="100", height="100"><br><audio controls autoplay> <source src="적축.m4a" type="audio/mp3"> </audio>
+           <span class="name"><h1>적축<h3>☑</h3></h1><br>적축은 소리도 작고 서걱거리는 소리가많아 부드러운타이핑과 깔끔한 타이핑을 원한다면 적축을 선택하면 될것 입니다.<BR>적축은 키압도 낮아 장시간 타이핑해도 손이 안아프고<BR> 키압이 낮은점이 너무쉽게 눌러지므로 게임할때 단점이 될수도 있습니다.</span>
+         </div>
+ 
+ 
+ 
+         
+       </div>
+     </div>
+     <script type="text/javascript">
+      function filter(){
+
+        var value, name, item, i;
+
+        value = document.getElementById("value").value.toUpperCase();
+        item = document.getElementsByClassName("item");
+
+        for(i=0;i<item.length;i++){
+          name = item[i].getElementsByClassName("name");
+          if(name[0].innerHTML.toUpperCase().indexOf(value) > -1){
+            item[i].style.display = "flex";
+          }else{
+            item[i].style.display = "none";
+          }
+        }
+      }
+</script>
+ </body>
+</body>
+</html>
+<center><H1>다음 업데이트 내용</H1>ver.2<br>_________________________________________________________________<br> <img src="고퀄 적축.gif" width="100", height="100">
+ ver.3 추가내용 <h3>키보드추천 추가, 스위치 추가, 메인홈페이지 추가</h3></H1></center>
+
